@@ -63,7 +63,7 @@ public class AudioEngine {
     private var engine: AVAudioEngine? = nil
     
     private let melodicBank: UInt8 = UInt8(kAUSampler_DefaultMelodicBankMSB)
-    private let gmPiano: UInt8 = 2
+    private let gmPiano: UInt8 = 0
     // private let gmViolin: UInt8 = 41
     // private let gmGuitar: UInt8 = 25
     
