@@ -17,7 +17,7 @@ let package = Package(
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
-         .package(url: "https://github.com/kmossi/MusicSymbol.git", .branch("main")),
+         .package(url: "https://github.com/musical77/MusicSymbol.git", .branch("main")),
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
@@ -27,6 +27,7 @@ let package = Package(
             dependencies: ["MusicSymbol"],
             resources: [
                 .copy("Resource/SoundFont/GeneralUser_GS_v1_471.sf2"),
+                .copy("Resource/SoundFont/Yamaha_C3_Grand_Piano.sf2"),
                 .copy("Resource/SoundFont/LICENSE.txt"),
                 .copy("Resource/SoundFont/README.md")
             ]
