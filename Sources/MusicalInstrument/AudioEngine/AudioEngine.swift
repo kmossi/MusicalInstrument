@@ -64,8 +64,8 @@ public class AudioEngine {
     
     private let melodicBank: UInt8 = UInt8(kAUSampler_DefaultMelodicBankMSB)
     private let gmPiano: UInt8 = 2
-    private let gmViolin: UInt8 = 41
-    private let gmGuitar: UInt8 = 25
+    // private let gmViolin: UInt8 = 41
+    // private let gmGuitar: UInt8 = 25
     
     /// 录制的声音文件
     private var file: AVAudioFile?
@@ -103,8 +103,8 @@ extension AudioEngine {
     /// create samplers from given sound bank
     private func createSamplers(soundBankUrl: URL) -> Bool {
         let pianoSampler = AVAudioUnitSampler()
-        let violinSampler = AVAudioUnitSampler()
-        let guitarSampler = AVAudioUnitSampler()
+        //let violinSampler = AVAudioUnitSampler()
+        //let guitarSampler = AVAudioUnitSampler()
         
         do {
             try pianoSampler.loadSoundBankInstrument(at: soundBankUrl,
@@ -112,18 +112,18 @@ extension AudioEngine {
                                                      bankMSB: melodicBank,
                                                      bankLSB: 0)
             
-            try violinSampler.loadSoundBankInstrument(at: soundBankUrl,
-                                                      program: gmViolin,
-                                                      bankMSB: melodicBank,
-                                                      bankLSB: 0)
-            try guitarSampler.loadSoundBankInstrument(at: soundBankUrl,
-                                                      program: gmGuitar,
-                                                      bankMSB: melodicBank,
-                                                      bankLSB: 0)
+            // try violinSampler.loadSoundBankInstrument(at: soundBankUrl,
+            //                                           program: gmViolin,
+            //                                           bankMSB: melodicBank,
+            //                                           bankLSB: 0)
+            // try guitarSampler.loadSoundBankInstrument(at: soundBankUrl,
+            //                                           program: gmGuitar,
+            //                                           bankMSB: melodicBank,
+            //                                           bankLSB: 0)
             
             samplerMap[.piano] = pianoSampler
-            samplerMap[.strings] = violinSampler
-            samplerMap[.guitar] = guitarSampler
+            // samplerMap[.strings] = violinSampler
+            // samplerMap[.guitar] = guitarSampler
             
             return true
         } catch {
