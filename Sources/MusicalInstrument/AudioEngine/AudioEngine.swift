@@ -14,7 +14,8 @@ public class AudioEngine {
     
     /// return default audio engine based on muse score sound font
     public static var `default` : AudioEngine = {
-        let url = Bundle.module.url(forResource: "GeneralUser_GS_v1_471", withExtension: "sf2")!
+        //Yamaha_C3_Grand_Piano.sf2     GeneralUser_GS_v1_471
+        let url = Bundle.module.url(forResource: "Yamaha_C3_Grand_Piano", withExtension: "sf2")!
         return AudioEngine(soundBankUrl: url)!
     }()
     
